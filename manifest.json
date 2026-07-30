@@ -2,7 +2,9 @@
   "name": "image_reidentifier",
   "display_name": "图片二次识别",
   "version": "1.0.0",
-  "description": "Image Reidentifier — 对已识别图片进行二次识别，通过VLM生成更精准的描述，并存入数据库",
+  "description": "Image Reidentifier — 对已识别图片进行二次识别，通过VLM生成更精准的结构化描述",
+  "categories": ["chat"],
+  "tags": ["image", "vlm", "recognition", "tool"],
   "author": "MoFox Team",
   "dependencies": {
     "plugins": [],

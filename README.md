@@ -94,7 +94,3 @@ prompt_template = "..."         # VLM 识别提示词模板
 - Plugin: `1.0.0`
 - Manifest: `plugins/image_reidentifier/manifest.json`
 - Min Core: `1.2.0-rc.2`
-
-## 📄 开源协议
-
-本项目采用 [AGPL-v3.0](LICENSE) 协议。
