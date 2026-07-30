@@ -1,0 +1,32 @@
+name: image_reidentifier.secondary_recognition
+description: 图片二次识别提示词模板，用于针对性识别图片特定区域
+version: "1.0.0"
+author: image_reidentifier plugin
+
+template: |
+  请对这张图片进行详细的二次识别分析。
+  
+  关注区域：{focus_area}
+  
+  请返回以下JSON格式的结果：
+  {{
+    "focus_area": "你实际分析的区域描述",
+    "description": "对该区域的详细描述",
+    "objects": ["识别到的对象1", "识别到的对象2"],
+    "confidence": 0.95
+  }}
+  
+  要求：
+  1. focus_area：描述你实际分析的区域
+  2. description：详细描述该区域的内容，包括人物、物体、场景、动作等
+  3. objects：列出识别到的主要对象（字符串数组）
+  4. confidence：你对这次识别的置信度（0.0-1.0之间的浮点数）
+  
+  请只返回JSON，不要包含其他文字说明。
+
+variables:
+  focus_area:
+    type: string
+    description: 关注区域描述
+    default: "全图"
+    required: true
